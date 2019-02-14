@@ -10,8 +10,10 @@ def compression(string):
       curr = string[i]
       count = 1
   output += curr + str(count)
+  if len(output) > len(string):
+    return string 
 
   return output 
 
 compression('aabcccccaaa')
-compression('abbbccd')
+compression('abcdef')
