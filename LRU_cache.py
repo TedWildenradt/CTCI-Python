@@ -31,14 +31,14 @@ class LRUCache:
     if key in self.hash:
       n = self.hash[key]
       self._remove(n)
-      self.add(n)
+      self._add(n)
       return n.val
     else:
       return -1
 
-  def put(self,key,value)
+  def put(self,key,value):
     if key in self.hash:
-      self._remove(hash[key])
+      self._remove(self.hash[key])
     newNode = Node(key,value)
     self._add(newNode)
     self.hash[key] = newNode
