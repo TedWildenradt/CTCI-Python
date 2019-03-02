@@ -1,9 +1,9 @@
 import random
 def shuffle(array):
   length = len(array)
-  end = length - 1
+  end_idx = length - 1
 
-  for i in range(end,0,-1):
+  for i in range(end_idx,0,-1):
     j = random.randint(0,i)
     if i == j:
       continue
