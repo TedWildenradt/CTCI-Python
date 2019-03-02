@@ -13,4 +13,4 @@ class Solution(object):
                 return [i,hash[nums[i]]]
 
 obj = Solution()
-obj.twoSum([2, 7, 11, 15], 9)
+obj.twoSum([2,3,3,2], 6)
