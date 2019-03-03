@@ -17,8 +17,6 @@ class Solution(object):
         for i in range(len(self.thousands)):
             if num % 1000 != 0:
                 newString = self.helper(num % 1000)  + self.thousands[i] + ' ' + newString
-            else:
-                return newString.strip()
             num = num // 1000
         return newString.strip()
         
@@ -33,4 +31,4 @@ class Solution(object):
             return self.lessThan20[num/100] + ' Hundred ' + self.helper(num % 100)
 
 obj = Solution()
-obj.numberToWords(50868)
+obj.numberToWords(1000000)
