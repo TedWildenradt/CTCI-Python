@@ -26,4 +26,4 @@ class Solution(object):
         return -1
 
 obj = Solution()
-obj.search([4,5,6,7,0,1,2], 0)
+obj.search([3,1], 1)
