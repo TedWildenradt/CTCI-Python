@@ -12,6 +12,8 @@ def lowestPositive(array):
   for i in range(len(array)):
     if array[i] > 0:
       return i + 1
+  return len(array)
 
 
-lowestPositive([3, 4, -1, 1])
+# lowestPositive([3, 4, -1, 1])
+lowestPositive([1,2,0])
