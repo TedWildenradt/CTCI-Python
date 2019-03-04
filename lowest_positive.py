@@ -4,9 +4,9 @@ def lowestPositive(array):
     if array[i] <= 0:
       array[j], array[i] = array[i], array[j]
       j += 1
-      
+
   for i in range(len(array)):
-    if abs(array[i]) - 1 < len(array) and array[abs(array[i]) - 1 > 0]:
+    if abs(array[i]) - 1 < len(array) and array[abs(array[i]) - 1] > 0:
       array[abs(array[i]) - 1] *= -1
 
   for i in range(len(array)):
