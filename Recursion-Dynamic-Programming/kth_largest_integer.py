@@ -1,3 +1,15 @@
+import heapq
+def fn(nums,k):
+  h = []
+  for n in nums:
+    if len(h) < k:
+      heapq.heappush(h, n)
+    else:
+      heapq.heappop(h)
+  return h[0]
+
+fn([3,2,1,5,6,4],2)
+
 def findKthLargestPartition(nums, k):
   start = 0
   end = len(nums) - 1
