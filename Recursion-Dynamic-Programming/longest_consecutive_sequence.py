@@ -15,6 +15,7 @@ class Solution(object):
                     count += 1
                     num += 1
             output = max(output, count)
+        return output
 
 obj = Solution()
 obj.longestConsecutive([100, 4, 200, 1, 3, 2])
