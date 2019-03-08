@@ -20,6 +20,7 @@ preorder = [3,9,20,15,7]
 inorder = [9,3,15,20,7]
 
 buildTree(preorder,inorder)
+
 '''
 1)  first node of preorder is root node
 2)  finding the root val on the inorder traversal shows where to split the left and right side of the tree
