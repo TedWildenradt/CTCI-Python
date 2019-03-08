@@ -9,6 +9,14 @@ def buildTree(preorder, inorder):
 
   return node 
 
+def buildTree2(preorder, inorder):
+    if inorder:
+        ind = inorder.index(preorder.pop(0))
+        root = TreeNode(inorder[ind])
+        root.left = buildTree(preorder, inorder[0:ind])
+        root.right = buildTree(preorder, inorder[ind+1:])
+        return root
+
 
 class TreeNode:
   def __init__(self,val):
