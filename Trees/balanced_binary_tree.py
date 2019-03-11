@@ -23,8 +23,22 @@ class Solution(object):
         if self.checkBalancing(root) == -1:
             return False 
         else: 
-            True
+            return True
 
+class Solution2(object):
+  def isBalanced(self, node):
+    return self.isBalancedNode(node)['balanced']
+  
+  def isBalancedNode(self, node):
+    if not node:
+      return {'balanced': True, 'depth':-1}
+    left = self.isBalancedNode(node.left)
+    right = self.isBalancedNode(node.right)
+
+    if left['balanced'] and right['balanced'] and abs(left['depth'] - right['depth']) <= 1:
+      return {'balanced': True, 'depth': max(left['depth'],right['depth']) + 1}
+    else:
+      return {'balanced': False, 'depth': 0}
 
 
 
@@ -51,3 +65,6 @@ root = array[0]
 
 obj = Solution()
 obj.isBalanced(root)
+
+obj2 = Solution2()
+obj2.isBalanced(root)
